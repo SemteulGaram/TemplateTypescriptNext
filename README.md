@@ -1,2 +1,2 @@
-# TemplateTypescriptNext
-Typescript + React-Next template
+# TemplateTypescriptNextjs
+Typescript + React-Nextjs template
