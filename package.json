@@ -19,10 +19,11 @@
   },
   "homepage": "https://github.com/SemteulGaram/TemplateTypescriptNextjs#readme",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "cross-env": "^7.0.2",
     "html-to-react": "^1.4.2",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "^9.3.4",
+    "next": "^9.3.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-markdown": "^4.3.1",
@@ -30,8 +31,8 @@
     "swr": "^0.2.0"
   },
   "devDependencies": {
-    "@types/node": "^13.11.0",
-    "@types/react": "^16.9.32",
+    "@types/node": "^13.13.0",
+    "@types/react": "^16.9.34",
     "@types/showdown": "^1.9.3",
     "typescript": "^3.8.3"
   }
