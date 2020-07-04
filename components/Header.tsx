@@ -1,24 +1,11 @@
+/** @jsx jsx */
+import { jsx, Interpolation } from '@emotion/core'
 import Link from 'next/link'
 
-const linkStyle = {
-  marginRight: 15
-}
+type Props = {}
 
-const Header = () => (
-  <div>
-    <Link href="/">
-      <a style={ linkStyle }>Home</a>
-    </Link>
-    <Link href="/about">
-      <a style={ linkStyle }>About</a>  
-    </Link>
-    <Link href="/blog">
-      <a style={ linkStyle }>Blog</a>
-    </Link>
-    <Link href="/blog/write">
-      <a style={ linkStyle }>Blog Write</a>
-    </Link>
-  </div>
-)
+const Header: React.FunctionComponent<Props> = (props) => (<div className='header'>
+
+</div>)
 
 export default Header

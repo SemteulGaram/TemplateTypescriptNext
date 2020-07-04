@@ -1,18 +1,20 @@
+/** @jsx jsx */
+import { jsx, Interpolation } from '@emotion/core'
 import React from 'react'
 
-type ClassComponentProps = {}
-type ClassComponentState = {}
+type Props = {}
+type State = {}
 
-class ClassComponent extends React.Component<ClassComponentProps, ClassComponentState> {
-  constructor (props: Readonly<ClassComponentProps>) {
+class Component extends React.Component<Props, State> {
+  constructor (props: Readonly<Props>) {
     super(props)
   }
 
   render (): React.ReactElement {
-    return (
-      <div className='class_component'></div>
-    )
+    return (<div className='component'>
+
+    </div>)
   }
 }
 
-export default ClassComponent
+export default Component
