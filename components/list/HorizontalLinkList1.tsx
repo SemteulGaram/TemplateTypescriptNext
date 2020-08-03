@@ -1,5 +1,5 @@
 /** @jsx jsx */
-
+// HorizontalLinkList v1.0.0
 // Warning: This component must use once each page for querying element issue
 import { jsx, css } from '@emotion/core'
 import { MEDIA_DESKTOP, MEDIA_MOBILE, FONT_EB, FONT_B, isMobi, COLOR_TEXT, COLOR_PRIMARY } from '../../src/var'
