@@ -88,15 +88,17 @@ class ImageSlider1 extends React.Component<Props, State> {
       }
     }`}>
       <div className='is1__limiter' css={css`{
+        position: relative;
+        height: 100%;
+        margin: 0 auto;
         ${MEDIA_DESKTOP} {
-          position: relative;
           width: 1200px;
-          height: 100%;
-          margin: 0 auto;
+        }
+        ${MEDIA_MOBILE} {
+          width: 86vw;
         }
       }`}>
-        <h2 className='is1__desc' css={css`{
-          position: absolute;
+        <h2 className='is1__title' css={css`{
           margin: 0;
 
           color: ${COLOR_TEXT};
@@ -104,34 +106,29 @@ class ImageSlider1 extends React.Component<Props, State> {
           font-weight: normal;
           line-height: 1.38;
           ${MEDIA_DESKTOP} {
-            left: 0;
-            top: 112px;
+            padding: 112px 0 0 0;
 
             font-size: 40px;
           }
           ${MEDIA_MOBILE} {
-            left: 8.4vw;
-            top: 21.56vw;
+            padding: 21.56vw 0 0 0;
 
             font-size: 5.6vw;
           }
         }`}>
           ImageSlider1
           <br/>
-          ImageSlider1
+          여분의 줄
         </h2>
         <div className='is1__imgs' css={css`{
-          position: absolute;
+          position: relative;
+          width: 100%;
           ${MEDIA_DESKTOP} {
-            left: 0;
-            top: 240px;
-            width: 1200px;
+            margin: 32px 0 0 0;
             height: 437px;
           }
           ${MEDIA_MOBILE} {
-            left: 7.18vw;
-            top: 39.06vw;
-            width: 85.62vw;
+            margin: 5vw 0 0 0;
             height: 37.18vw;
           }
           & > div {
@@ -153,28 +150,25 @@ class ImageSlider1 extends React.Component<Props, State> {
           })
         }</div>
         <div className='is1__imgdesc' css={css`{
+          position: relative;
+          width: 100%;
+
+          display: flex;
+          align-items: center;
+          ${MEDIA_DESKTOP} {
+            height: 32px;
+          }
           ${MEDIA_MOBILE} {
-            position: absolute;
-            left: 7.18vw;
-            top: 76.24vw;
-            width: 85.62vw;
-            height: 4.38vw;
+            height: 5vw;
           }
         }`}>
           <div className='is1__imgdesc__line' css={css`{
-            position: absolute;
-            left: 0;
+            position: relative;
             height: 2px;
 
+            flex: 1 0 auto;
+
             background-color: ${COLOR_BG_DARKER};
-            ${MEDIA_DESKTOP} {
-              top: 696px;
-              width: 1150px;
-            }
-            ${MEDIA_MOBILE} {
-              top: 50%;
-              width: 90%;
-            }
           }`}>
             <div className='is1__imgdesc__line__bar' css={css`{
               position: absolute;
@@ -189,24 +183,17 @@ class ImageSlider1 extends React.Component<Props, State> {
             }`}></div>
           </div>
           <div className='is1__imgdesc__content' css={css`{
-            position: absolute;
+            margin: 0 1em;
 
-            font-family: ${FONT_B};
+            flex: 0 0 auto;
 
-            line-height: 1;
             color: ${COLOR_TEXT};
+            font-family: ${FONT_B};
+            line-height: 1;
             ${MEDIA_DESKTOP} {
-              right: 8px;
-              top: 690px;
-
               font-size: 15px;
             }
             ${MEDIA_MOBILE} {
-              right: -.5vw;
-              top: .3vw;
-              width: 10%;
-              height: 4.38vw;
-
               font-size: 2vw;
             }
           }`}>

@@ -2,7 +2,7 @@
 // HorizontalLinkList v1.0.0
 // Warning: This component must use once each page for querying element issue
 import { jsx, css } from '@emotion/core'
-import { MEDIA_DESKTOP, MEDIA_MOBILE, FONT_EB, FONT_B, isMobi, COLOR_TEXT, COLOR_PRIMARY } from '../../src/var'
+import { MEDIA_DESKTOP, MEDIA_MOBILE, FONT_B, isMobi, COLOR_TEXT, COLOR_PRIMARY } from '../../src/var'
 
 type Card1Props = {
   imageSrc: string
@@ -65,7 +65,6 @@ const Card1: React.FunctionComponent<Card1Props> = props => (<a href={props.link
     }`}>
       <div className='card1__subtitle' css={css`{
         color: ${ COLOR_PRIMARY };
-        font-family: ${ FONT_B };
         line-height: 1;
         ${ MEDIA_DESKTOP } {
           margin: 10px 0;
@@ -123,7 +122,6 @@ const HorizontalLinkList1: React.FunctionComponent<Props> = props => (<div class
         margin: 0;
 
         color: ${ COLOR_TEXT };
-        font-family: ${ FONT_B };
         ${ MEDIA_DESKTOP } {
           top: 158px;
           left: 0;
@@ -139,7 +137,7 @@ const HorizontalLinkList1: React.FunctionComponent<Props> = props => (<div class
       }`}>
         HorizontalLinkList1<br/>
         <span className='hll1__title__highlight' css={css`{
-          font-family: ${ FONT_EB };
+          font-family: ${ FONT_B };
         }`}>예시 제목 강조</span>
       </h2>
     </div>
