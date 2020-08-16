@@ -1,8 +1,15 @@
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core'
 import { NextPage } from 'next'
 import Head from 'next/head'
+import PlainHeader from '../components/header/plain-header'
 import LayoutPlain from '../components/LayoutPlain'
 import HorizontalLinkList1 from '../components/list/HorizontalLinkList1'
 import ImageSlider1 from '../components/slider/ImageSlider1'
+import PeopleIntro1 from '../components/intro/PeopleIntro1'
+import Contact1 from '../components/contact/Contact1'
+import Contact2 from '../components/contact/Contact2'
+import { MEDIA_DESKTOP, MEDIA_MOBILE, COLOR_TEXT_INVERT, COLOR_TEXT } from '../src/var'
 
 type Props = {}
 
@@ -11,6 +18,44 @@ const Index: NextPage<Props> = props => {
     <Head>
       <title>컴포넌트 예시 페이지</title>
     </Head>
+    <PlainHeader position='fixed' additionalCss={css`{
+      &.header--top {
+        ${MEDIA_DESKTOP} {
+          height: 165px;
+
+          background-color: transparent;
+          box-shadow: none;
+        }
+        ${MEDIA_MOBILE} {
+          background-color: transparent;
+          box-shadow: none;
+        }
+        .header__logo {
+          ${MEDIA_DESKTOP} {
+            height: 135px;
+            margin-top: 30px;
+            background-image: url("/common/logo-full.png");
+          }
+        }
+        .header__link__items {
+          ${MEDIA_DESKTOP} {
+            color: ${COLOR_TEXT_INVERT};
+            &::before {
+              background-color: ${COLOR_TEXT_INVERT};
+            }
+          }
+        }
+        .header__link__items2 {
+          border: solid 1px ${COLOR_TEXT_INVERT};
+
+          color: ${COLOR_TEXT_INVERT};
+          &:hover {
+            background-color: ${COLOR_TEXT_INVERT};
+            color: ${COLOR_TEXT};
+          }
+        }
+      }
+    }`} />
     <HorizontalLinkList1 />
     <ImageSlider1 imgSrcs={[
       '/img/example1.jpg',
@@ -18,6 +63,9 @@ const Index: NextPage<Props> = props => {
       '/img/example3.jpg',
       '/img/example4.jpg'
     ]}/>
+    <PeopleIntro1 />
+    <Contact1 />
+    <Contact2 />
   </LayoutPlain>)
 }
 

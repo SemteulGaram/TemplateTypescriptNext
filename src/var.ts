@@ -1,6 +1,21 @@
 export const MEDIA_DESKTOP = '@media (min-width: 800px)'
 export const MEDIA_MOBILE = '@media screen and (max-width: 799px)'
 
+export const CSS_ABSOLUTE_FULL = `position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;`
+export const CSS_FLEX_CENTER = `display: flex;
+justify-content: center;
+align-items: center;`
+export const CSS_BACKGROND_IMAGE_COVER = `background-position: center;
+background-repeat: no-repeat;
+background-size: cover;`
+export const CSS_BACKGROND_IMAGE_CONTAIN = `background-position: center;
+background-repeat: no-repeat;
+background-size: contain;`
+
 export const FONT_EB = "'NanumSquareEB', sans-serif" 
 export const FONT_B = "'NanumSquareB', sans-serif"
 export const FONT_R = "'NanumSquareR', sans-serif"
@@ -17,24 +32,32 @@ export const FONT_L2 = '"SpoqaHanSansThin", sans-serif'
 
 // Main Color
 export const COLOR_PRIMARY = '#007a50'
+export const COLOR_PRIMARY_HIGHLIGHT = '#005530'
+export const COLOR_PRIMARY_BG = '#ffffff'
 // Text Color
-export const COLOR_TEXT = '#404040'
+export const COLOR_TEXT = '#292929'
 export const COLOR_TEXT_LIGHT = '#6f6f6f'
 export const COLOR_TEXT_LIGHTER = '#cbcbcb'
+export const COLOR_TEXT_INVERT = '#f0f0f0'
 // Bg Color
 export const COLOR_BG = '#ffffff'
 export const COLOR_BG_DARK = '#f8f8f8'
 export const COLOR_BG_DARKER = '#bababa'
+// Always Color
+export const COLOR_WHITE = '#ffffff'
+export const COLOR_WHITE_DARK = '#f0f0f0'
+export const COLOR_WHITE_DARKER = '#c0c0c0'
+export const COLOR_WHITE_DARKEST = '#878787'
 
 export const SITE_MAIN_HREF = 'https://example.com/'
 export const URL_POST_REGEX = /^.*-([0-9a-f]{8,})$/
 export const URL_CONTACT = /^#contact$/
 
 // SEO
-export const INDEX_TITLE = '유튜디오'
-export const INDEX_DESCRIPTION = ''
+export const INDEX_TITLE = 'WIP'
+export const INDEX_DESCRIPTION = 'WIP'
 export const INDEX_KEYWORDS = [
-  "유튜디오"
+  "작업중"
 ]
 
 export const isDesk = function () {
