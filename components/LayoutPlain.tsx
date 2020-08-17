@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { COLOR_PRIMARY, FONT_R, MEDIA_DESKTOP, MEDIA_MOBILE } from '../src/var'
+import { COLOR_PRIMARY, FONT_R } from '../src/var'
 
 type Props = {}
 
@@ -126,6 +126,10 @@ const LayoutPlain: React.FunctionComponent<Props> = (props) => (
     }
 
     @media (min-width: 800px) {
+      body {
+        min-width: 1280px;
+      }
+
       .__desktop {
         display: inline-block;
       }

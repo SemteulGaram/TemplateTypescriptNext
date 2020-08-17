@@ -2,7 +2,7 @@
 import { jsx, css } from '@emotion/core'
 import { useState } from 'react'
 
-import { MEDIA_DESKTOP, MEDIA_MOBILE, CSS_BOX_SHADOW, CSS_BACKGROND_IMAGE_COVER, FONT_B, COLOR_TEXT, FONT_R, COLOR_TEXT_LIGHT, COLOR_GRAY_300, COLOR_GRAY_500 } from '../../src/var'
+import { MEDIA_DESKTOP, MEDIA_MOBILE, CSS_BOX_SHADOW, CSS_BACKGROUND_IMAGE_COVER, FONT_B, COLOR_TEXT, FONT_R, COLOR_TEXT_LIGHT, COLOR_GRAY_300, COLOR_GRAY_500 } from '../../src/var'
 import SliderLinear2, { SLIDER_LINEAR2_CLASS, SLIDER_LINEAR2_ITEMS_CLASS } from './slider-linear2'
 
 export type ReviewSliderReview = {
@@ -121,7 +121,7 @@ const ReviewSlider: React.FunctionComponent<Props> = (props) => {
         .rs__slider__profile {
           flex: 0 0 auto;
 
-          ${CSS_BACKGROND_IMAGE_COVER}
+          ${CSS_BACKGROUND_IMAGE_COVER}
           border-radius: 50%;
           ${MEDIA_DESKTOP} {
             width: 70px;

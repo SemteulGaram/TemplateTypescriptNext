@@ -64,6 +64,9 @@ const VideoCover: React.FunctionComponent<Props> = (props) => {
     ${MEDIA_DESKTOP} {
       height: 700px;
     }
+    ${MEDIA_MOBILE} {
+      height: 100vh;
+    }
   }`}>
     <div className='video_cover__bg' css={css`{
       position: absolute;
@@ -90,7 +93,8 @@ const VideoCover: React.FunctionComponent<Props> = (props) => {
         padding-top: 1em;
 
         color: ${COLOR_TEXT_INVERT};
-        line-height: 1;
+        line-height: 1.36;
+        text-align: center;
         ${MEDIA_DESKTOP} {
           font-size: 55px;
         }

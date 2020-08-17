@@ -6,7 +6,7 @@ import React from 'react'
 import { DayPickerSingleDateController } from 'react-dates'
 import moment from 'moment'
 
-import { MEDIA_DESKTOP, MEDIA_MOBILE, FONT_R, FONT_EB, FONT_B, isDesk, COLOR_WHITE, COLOR_WHITE_DARK, COLOR_PRIMARY, COLOR_PRIMARY_BG, COLOR_WHITE_DARKER } from '../../src/var'
+import { MEDIA_DESKTOP, MEDIA_MOBILE, FONT_R, FONT_EB, FONT_B, isDesk, COLOR_WHITE, COLOR_GRAY_100, COLOR_PRIMARY, COLOR_PRIMARY_BG, COLOR_GRAY_300 } from '../../src/var'
 
 moment.locale('ko');
 
@@ -35,7 +35,7 @@ const DEFAULT_CSS = css`{
   }
 
   .inputs::placeholder {
-    color: ${COLOR_WHITE_DARKER};
+    color: ${COLOR_GRAY_300};
     opacity: 1;
   }
 
@@ -278,7 +278,7 @@ class Contact1 extends React.Component<Props, State> {
             }
           }`}>상담문의</div>
           <div className='contact1__subtitle' css={css`{
-            color: ${COLOR_WHITE_DARK};
+            color: ${COLOR_GRAY_100};
             font-family: ${ FONT_B };
             ${MEDIA_DESKTOP} {
               font-size: 22px;

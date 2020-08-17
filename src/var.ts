@@ -1,21 +1,6 @@
 export const MEDIA_DESKTOP = '@media (min-width: 800px)'
 export const MEDIA_MOBILE = '@media screen and (max-width: 799px)'
 
-export const CSS_ABSOLUTE_FULL = `position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;`
-export const CSS_FLEX_CENTER = `display: flex;
-justify-content: center;
-align-items: center;`
-export const CSS_BACKGROND_IMAGE_COVER = `background-position: center;
-background-repeat: no-repeat;
-background-size: cover;`
-export const CSS_BACKGROND_IMAGE_CONTAIN = `background-position: center;
-background-repeat: no-repeat;
-background-size: contain;`
-
 export const FONT_EB = "'NanumSquareEB', sans-serif" 
 export const FONT_B = "'NanumSquareB', sans-serif"
 export const FONT_R = "'NanumSquareR', sans-serif"
@@ -45,11 +30,37 @@ export const COLOR_BG_DARK = '#f8f8f8'
 export const COLOR_BG_DARKER = '#bababa'
 // Always Color
 export const COLOR_WHITE = '#ffffff'
-export const COLOR_WHITE_DARK = '#f0f0f0'
-export const COLOR_WHITE_DARKER = '#c0c0c0'
-export const COLOR_WHITE_DARKEST = '#878787'
+export const COLOR_GRAY_50 = '#FAFAFA'
+export const COLOR_GRAY_100 = '#F5F5F5'
+export const COLOR_GRAY_200 = '#EEEEEE'
+export const COLOR_GRAY_300 = '#E0E0E0'
+export const COLOR_GRAY_400 = '#BDBDBD'
+export const COLOR_GRAY_500 = '#9E9E9E'
+export const COLOR_GRAY = COLOR_GRAY_500
+export const COLOR_GRAY_600 = '#757575'
+export const COLOR_GRAY_700 = '#616161'
+export const COLOR_GRAY_800 = '#424242'
+export const COLOR_GRAY_900 = '#212121'
+export const COLOR_BLACK = '#000000'
 // Shadow Color
 export const COLOR_SHADOW = 'rgba(0,0,0,.16)';
+
+export const CSS_ABSOLUTE_FULL = `position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;`
+export const CSS_FLEX_CENTER = `display: flex;
+justify-content: center;
+align-items: center;`
+export const CSS_BACKGROUND_IMAGE_COVER = `background-position: center;
+background-repeat: no-repeat;
+background-size: cover;`
+export const CSS_BACKGROUND_IMAGE_CONTAIN = `background-position: center;
+background-repeat: no-repeat;
+background-size: contain;`
+export const CSS_BOX_SHADOW = `box-shadow: 0 3px 6px 0 ${COLOR_SHADOW};`
+
 
 export const SITE_MAIN_HREF = 'https://example.com/'
 export const URL_POST_REGEX = /^.*-([0-9a-f]{8,})$/
