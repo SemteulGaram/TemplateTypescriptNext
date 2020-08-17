@@ -48,6 +48,8 @@ export const COLOR_WHITE = '#ffffff'
 export const COLOR_WHITE_DARK = '#f0f0f0'
 export const COLOR_WHITE_DARKER = '#c0c0c0'
 export const COLOR_WHITE_DARKEST = '#878787'
+// Shadow Color
+export const COLOR_SHADOW = 'rgba(0,0,0,.16)';
 
 export const SITE_MAIN_HREF = 'https://example.com/'
 export const URL_POST_REGEX = /^.*-([0-9a-f]{8,})$/
