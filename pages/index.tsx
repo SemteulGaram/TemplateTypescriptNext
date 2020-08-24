@@ -9,7 +9,8 @@ import ImageSlider1 from '../components/slider/ImageSlider1'
 import PeopleIntro1 from '../components/intro/PeopleIntro1'
 import Contact1 from '../components/contact/Contact1'
 import Contact2 from '../components/contact/Contact2'
-import { MEDIA_DESKTOP, MEDIA_MOBILE, COLOR_TEXT_INVERT, COLOR_TEXT } from '../src/var'
+import { MEDIA_DESKTOP, MEDIA_MOBILE, COLOR_TEXT_INVERT, COLOR_TEXT, FONT_B } from '../src/var'
+import VerticalStickyImageNContentList from '../components/list/VerticalStickyImageNContentList'
 
 type Props = {}
 
@@ -66,6 +67,43 @@ const Index: NextPage<Props> = props => {
     <PeopleIntro1 />
     <Contact1 />
     <Contact2 />
+    <VerticalStickyImageNContentList
+        list={[
+          {
+            content: (<div className='vsicl__items'>
+              vsicl__items1
+            </div>),
+            imageSrc: '/img/example1.jpg',
+            imageSrcM: '/img/example1.jpg'
+          },
+          {
+            content: (<div className='vsicl__items'>
+              vsicl__items2
+            </div>),
+            imageSrc: '/img/example2.jpg',
+            imageSrcM: '/img/example2.jpg'
+          },
+          {
+            content: (<div className='vsicl__items'>
+              vsicl__items3
+            </div>),
+            imageSrc: '/img/example3.jpg',
+            imageSrcM: '/img/example3.jpg'
+          },
+          {
+            content: (<div className='vsicl__items'>
+              vsicl__items4
+            </div>),
+            imageSrc: '/img/example4.jpg',
+            imageSrcM: '/img/example4.jpg'
+          }
+        ]}
+        additionalCss={css`{
+          & .vsicl__items {
+            font-family: ${FONT_B};
+          }
+        }`}
+        desktopImageRight={true} />
   </LayoutPlain>)
 }
 
