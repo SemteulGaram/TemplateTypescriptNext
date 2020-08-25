@@ -74,11 +74,8 @@ const VerticalStickyImageNContentList: React.FunctionComponent<Props> = props =>
 
     ${ MEDIA_DESKTOP } {
       min-width: 1200px;
-      margin-bottom: 140px;
     }
     ${MEDIA_MOBILE} {
-      margin-bottom: 20vw;
-
       display: flex;
       flex-direction: row;
     }
