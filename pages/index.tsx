@@ -11,6 +11,7 @@ import Contact1 from '../components/contact/Contact1'
 import Contact2 from '../components/contact/Contact2'
 import { MEDIA_DESKTOP, MEDIA_MOBILE, COLOR_TEXT_INVERT, COLOR_TEXT, FONT_B } from '../src/var'
 import VerticalStickyImageNContentList from '../components/list/VerticalStickyImageNContentList'
+import GoToContact from '../components/form/GoToContact'
 
 type Props = {}
 
@@ -104,6 +105,7 @@ const Index: NextPage<Props> = props => {
           }
         }`}
         desktopImageRight={true} />
+      <GoToContact />
   </LayoutPlain>)
 }
 

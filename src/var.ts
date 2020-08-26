@@ -28,6 +28,7 @@ export const COLOR_TEXT_INVERT = '#f0f0f0'
 export const COLOR_BG = '#ffffff'
 export const COLOR_BG_DARK = '#f8f8f8'
 export const COLOR_BG_DARKER = '#bababa'
+export const COLOR_BG_INVERT = '#292929'
 // Always Color
 export const COLOR_WHITE = '#ffffff'
 export const COLOR_GRAY_50 = '#FAFAFA'
