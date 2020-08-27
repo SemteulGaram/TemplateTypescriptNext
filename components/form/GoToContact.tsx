@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 
-import { MEDIA_DESKTOP, FONT_EB, FONT_B, MEDIA_MOBILE, COLOR_TEXT, COLOR_BG, COLOR_BG_INVERT, COLOR_TEXT_INVERT, COLOR_PRIMARY, COLOR_PRIMARY_BG } from '../../src/var'
+import { MEDIA_DESKTOP, FONT_EB, FONT_B, MEDIA_MOBILE, COLOR_BG_INVERT, COLOR_TEXT_INVERT, COLOR_PRIMARY, COLOR_PRIMARY_BG } from '../../src/var'
 
 type Props = {}
 
-const GoToContact: React.FunctionComponent<Props> = (props) => (<div className='s5' css={css`{
+const GoToContact: React.FunctionComponent<Props> = (props) => (<div className='gtc' css={css`{
   position: relative;
   width: 100%;
 
@@ -19,14 +19,14 @@ const GoToContact: React.FunctionComponent<Props> = (props) => (<div className='
     height: 58vw;
   }
 }`}>
-  <div className='s5__limiter' css={css`{
+  <div className='gtc__limiter' css={css`{
     ${ MEDIA_DESKTOP } {
       position: relative;
       width: 1200px;
       margin: 0 auto;
     }
   }`}>
-    <div className='s5__title' css={css`{
+    <div className='gtc__title' css={css`{
       position: absolute;
       left: 50%;
       width: 100%;
@@ -48,10 +48,10 @@ const GoToContact: React.FunctionComponent<Props> = (props) => (<div className='
         font-family: ${ FONT_EB };
       }`}>(Extra line)</span>
     </div>
-    <a className='s5__button_wrapper' href='/#contact' css={css`{
+    <a className='gtc__button_wrapper' href='/#contact' css={css`{
 
     }`}>
-      <div className='s5__button' css={css`{
+      <div className='gtc__button' css={css`{
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
