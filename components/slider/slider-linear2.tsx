@@ -17,7 +17,7 @@ export class SliderLinear2Store extends EventEmitter {
   }
 
   setChangeIndex (index: number) {
-    this.index = index
+    this.index = normalizeNumber(index, 0, this.count)
     this.emit('changeIndex', this)
   }
 }

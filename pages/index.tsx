@@ -12,6 +12,9 @@ import Contact2 from '../components/contact/Contact2'
 import { MEDIA_DESKTOP, MEDIA_MOBILE, COLOR_TEXT_INVERT, COLOR_TEXT, FONT_B } from '../src/var'
 import VerticalStickyImageNContentList from '../components/list/VerticalStickyImageNContentList'
 import GoToContact from '../components/form/GoToContact'
+import SliderLinear2 from '../components/slider/slider-linear2'
+import ReviewSlider from '../components/slider/review-slider'
+import ReviewImageSlider from '../components/slider/review-image-slider'
 
 type Props = {}
 
@@ -106,6 +109,50 @@ const Index: NextPage<Props> = props => {
         }`}
         desktopImageRight={true} />
       <GoToContact />
+      <ReviewSlider list={[
+        {
+          imgSrc: '/img/example1.jpg',
+          author: 'author',
+          content: 'content'
+        },
+        {
+          imgSrc: '/img/example2.jpg',
+          author: 'author2',
+          content: 'content2'
+        },
+        {
+          imgSrc: '/img/example3.jpg',
+          author: 'author3',
+          content: 'content3'
+        }
+      ]} />
+      <ReviewImageSlider items={[
+        {
+          imgSrc: '/img/example1.jpg',
+          imgSrcM: '/img/example1.jpg',
+          title: 'title1'
+        },
+        {
+          imgSrc: '/img/example2.jpg',
+          imgSrcM: '/img/example2.jpg',
+          title: 'title2'
+        },
+        {
+          imgSrc: '/img/example3.jpg',
+          imgSrcM: '/img/example3.jpg',
+          title: 'title3'
+        },
+        {
+          imgSrc: '/img/example4.jpg',
+          imgSrcM: '/img/example4.jpg',
+          title: 'title4'
+        },
+        {
+          imgSrc: '/img/example1.jpg',
+          imgSrcM: '/img/example1.jpg',
+          title: 'title5'
+        }
+      ]} />
   </LayoutPlain>)
 }
 
