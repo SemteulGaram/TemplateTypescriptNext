@@ -229,7 +229,7 @@ const ReviewImageSlider: React.FunctionComponent<Props> = (props) => {
             text-align: center;
             white-space: nowrap;
           }
-        }`}>{ index+1 }/{ store.count }</div>
+        }`}>{ index+1 }/{ store ? store.count : '-' }</div>
       </div>
     </div>
   </div>)
