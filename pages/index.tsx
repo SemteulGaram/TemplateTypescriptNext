@@ -15,6 +15,7 @@ import GoToContact from '../components/form/GoToContact'
 import SliderLinear2 from '../components/slider/slider-linear2'
 import ReviewSlider from '../components/slider/review-slider'
 import ReviewImageSlider from '../components/slider/review-image-slider'
+import ZigzagGallery from '../components/gallery/zigzag-gallery'
 
 type Props = {}
 
@@ -150,6 +151,28 @@ const Index: NextPage<Props> = props => {
         {
           imgSrc: '/img/example1.jpg',
           imgSrcM: '/img/example1.jpg',
+          title: 'title5'
+        }
+      ]} />
+      <ZigzagGallery items={[
+        {
+          imgSrc: '/img/example1.jpg',
+          title: 'title1'
+        },
+        {
+          imgSrc: '/img/example2.jpg',
+          title: 'title2'
+        },
+        {
+          imgSrc: '/img/example3.jpg',
+          title: 'title3'
+        },
+        {
+          imgSrc: '/img/example4.jpg',
+          title: 'title4'
+        },
+        {
+          imgSrc: '/img/example1.jpg',
           title: 'title5'
         }
       ]} />

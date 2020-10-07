@@ -24,11 +24,13 @@ export const COLOR_TEXT = '#292929'
 export const COLOR_TEXT_LIGHT = '#6f6f6f'
 export const COLOR_TEXT_LIGHTER = '#cbcbcb'
 export const COLOR_TEXT_INVERT = '#f0f0f0'
+export const COLOR_TEXT_INVERT_DARKER ='#4b4b4b'
 // Bg Color
 export const COLOR_BG = '#ffffff'
 export const COLOR_BG_DARK = '#f8f8f8'
 export const COLOR_BG_DARKER = '#bababa'
 export const COLOR_BG_INVERT = '#292929'
+
 // Always Color
 export const COLOR_WHITE = '#ffffff'
 export const COLOR_GRAY_50 = '#FAFAFA'
