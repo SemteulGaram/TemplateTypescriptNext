@@ -3,7 +3,7 @@ import { jsx, css } from '@emotion/core'
 import { NextPage } from 'next'
 import Head from 'next/head'
 
-import { MEDIA_DESKTOP, MEDIA_MOBILE, COLOR_TEXT_INVERT, COLOR_TEXT, FONT_B, COLOR_BG } from '../src/var'
+import { MEDIA_DESKTOP, MEDIA_MOBILE, COLOR_TEXT_INVERT, COLOR_TEXT, FONT_B, COLOR_BG, COLOR_PRIMARY, COLOR_PRIMARY_BG } from '../src/var'
 import PlainHeader from '../components/header/plain-header'
 import LayoutPlain from '../components/LayoutPlain'
 import HorizontalLinkList1 from '../components/list/HorizontalLinkList1'
@@ -18,6 +18,7 @@ import ReviewImageSlider from '../components/slider/review-image-slider'
 import ZigzagGallery from '../components/gallery/zigzag-gallery'
 import SimpleContentImage from '../components/layout/simple-content-image'
 import ShowcaseHorizontal3 from '../components/showcase/showcase-horizontal3'
+import RoundButton from '../components/_button/round-button'
 
 type Props = {}
 
@@ -65,6 +66,10 @@ const Index: NextPage<Props> = props => {
       }
     }`} />
     <HorizontalLinkList1 />
+    <RoundButton
+        bgColor={COLOR_PRIMARY}
+        color={COLOR_PRIMARY_BG}
+    >ROUND BUTTON</RoundButton>
     <ImageSlider1 imgSrcs={[
       '/img/example1.jpg',
       '/img/example2.jpg',
@@ -184,7 +189,7 @@ const Index: NextPage<Props> = props => {
           componentMargin={'180px 0'}
           componentMarginM={'20vw 0'}
           fontSize={'16px'}
-          fontSizeM={'4.5vw'}
+          fontSizeM={'3vw'}
           content={
             <p css={css`{
               height: 5em;
@@ -201,7 +206,7 @@ const Index: NextPage<Props> = props => {
           componentMargin={'180px 0'}
           componentMarginM={'20vw 0'}
           fontSize={'16px'}
-          fontSizeM={'4.5vw'}
+          fontSizeM={'3vw'}
 
           title={
             <span>showcase/showcase-horizontal.tsx</span>

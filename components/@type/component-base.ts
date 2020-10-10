@@ -13,4 +13,4 @@ export type ComponentBase = {
 export const DEFAULT_COMPONENT_MARGIN = '180px 0';
 export const DEFAULT_COMPONENT_MARGIN_M = '20vw 0';
 export const DEFAULT_FONT_SIZE = '16px';
-export const DEFAULT_FONT_SIZE_M = '4.5vw';
+export const DEFAULT_FONT_SIZE_M = '3vw';
