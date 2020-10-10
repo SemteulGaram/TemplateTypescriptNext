@@ -1,7 +1,8 @@
 /** @jsx jsx */
+// TODO: refactor
 import { jsx, css } from '@emotion/core'
 import { useState } from 'react'
-import { MEDIA_DESKTOP, FONT_B, MEDIA_MOBILE, COLOR_BG_INVERT, COLOR_TEXT_INVERT, COLOR_PRIMARY, COLOR_PRIMARY_BG, COLOR_TEXT_EMAIL_INPUT_BORDER, CSS_BOX_SHADOW, COLOR_PRIMARY_HIGHLIGHT } from '../../src/var'
+import { MEDIA_DESKTOP, FONT_B, MEDIA_MOBILE, COLOR_BG_INVERT, COLOR_TEXT_INVERT, COLOR_PRIMARY_BG, COLOR_GRAY, COLOR_PRIMARY } from '../../src/var'
 
 const Subscribe1: React.FunctionComponent = () => {
   const [ fEmail, setFEmail ] = useState<string>('')
@@ -42,7 +43,7 @@ const Subscribe1: React.FunctionComponent = () => {
           font-size: 5.56vw;
         }
       }`}>
-        5분 투자로 <br className='__mobile'/>구독자 수 1000명을 늘리고 싶다면?
+        TODO: TITLE
       </h2>
       <div className='sub__content' css={css`{
         position: absolute;
@@ -89,8 +90,7 @@ const Subscribe1: React.FunctionComponent = () => {
             font-size: 3vw;
           }
         }`}>
-          100만 유튜버 포함 유튜브 채널 100개 넘게 운영한<br/>
-          영상 편집자가 현실적인 유튜브 운영 방법을 알려드립니다.
+          TODO: CONTENT
         </div>
       </div>
       <div className='sub__subscribe' css={css`{
@@ -129,7 +129,7 @@ const Subscribe1: React.FunctionComponent = () => {
             height: 60px;
             padding: 0 30px;
 
-            border: solid 2px ${COLOR_TEXT_EMAIL_INPUT_BORDER};
+            border: solid 2px ${COLOR_GRAY};
             border-radius: 30px;
 
             font-size: 20px;
@@ -139,7 +139,7 @@ const Subscribe1: React.FunctionComponent = () => {
             height: 12.5vw;
             padding: 0 6.25vw;
 
-            border: solid 1px ${COLOR_TEXT_EMAIL_INPUT_BORDER};
+            border: solid 1px ${COLOR_GRAY};
             border-radius: 6.25vw;
 
             font-size: 4vw;
@@ -147,8 +147,6 @@ const Subscribe1: React.FunctionComponent = () => {
         }`}/>
         <input type="submit" value="구독하기" name="subscribe" className="sub__subscribe__submit" onClick={event => {
           event.preventDefault()
-          // @ts-ignore
-          gtag('event', '버튼클릭', {'event_category' : '구독신청', 'event_label' : '구독신청'})
           const email = fEmail
 
           if (!email) {
@@ -181,7 +179,7 @@ const Subscribe1: React.FunctionComponent = () => {
           justify-content: center;
           align-items: center;
 
-          background-color: ${COLOR_PRIMARY_HIGHLIGHT};
+          background-color: ${COLOR_PRIMARY};
           border: none;
           box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
           outline: none;
