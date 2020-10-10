@@ -1,22 +1,25 @@
 /** @jsx jsx */
-// Round Button v1.0.2
+// Round Button v1.0.3
 import { css, keyframes } from '@emotion/core'
 import styled from '@emotion/styled'
 
 import { CSS_BOX_SHADOW_BUTTON, FONT_B, MEDIA_DESKTOP, MEDIA_MOBILE } from '../../src/var'
 
 type Props = {
+  // Required
   color: string
   bgColor: string
+  // Optional
   border?: string
   width?: string
   widthM?: string
   fontSize?: string
   fontSizeM?: string
+  // Ripple options
+  disableRipple?: boolean
   overrideRippleSize?: string
   overrideRippleSizeM?: string
   overrideRippleColor?: string
-  disableRipple?: boolean
 }
 
 const generatorKeyfrmaesRipple = (overrideRippleSize?: string) => {
@@ -47,7 +50,7 @@ const generatorKeyfrmaesRipple = (overrideRippleSize?: string) => {
 }
 
 // Ripple Effect https://codeconvey.com/ripple-effect-on-button-click-css/
-const RoundButton: React.FunctionComponent<Props> = styled.button<Props>`
+const RoundButton = styled.button<Props>`
   all: unset;
   box-sizing: border-box;
 
