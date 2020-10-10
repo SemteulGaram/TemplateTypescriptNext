@@ -1,5 +1,5 @@
 /** @jsx jsx */
-// Round Button v1.0.1
+// Round Button v1.0.2
 import { css, keyframes } from '@emotion/core'
 import styled from '@emotion/styled'
 
@@ -8,7 +8,6 @@ import { CSS_BOX_SHADOW_BUTTON, FONT_B, MEDIA_DESKTOP, MEDIA_MOBILE } from '../.
 type Props = {
   color: string
   bgColor: string
-  bgHighlightColor?: string
   border?: string
   width?: string
   widthM?: string
