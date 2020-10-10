@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx, css, Interpolation } from '@emotion/core'
 import Link from 'next/link'
-
-import { MEDIA_DESKTOP, MEDIA_MOBILE, FONT_B, COLOR_PRIMARY_BG, COLOR_TEXT_LIGHT, COLOR_TEXT, COLOR_PRIMARY, COLOR_PRIMARY_HIGHLIGHT, COLOR_TEXT_INVERT } from '../../src/var'
 import { useState, useEffect } from 'react'
+
+import { MEDIA_DESKTOP, MEDIA_MOBILE, FONT_B, COLOR_TEXT_LIGHT, COLOR_TEXT, COLOR_TEXT_INVERT, COLOR_BG, CSS_BOX_SHADOW } from '../../src/var'
 
 type Props = {
   position?: 'fixed'|'absolute'|'relative'
@@ -94,19 +94,19 @@ const PlainHeader: React.FunctionComponent<Props> = (props) => {
     transform: 0;
     overflow: hidden;
 
-    background-color: ${ COLOR_PRIMARY_BG };
-    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+    background-color: ${COLOR_BG};
+    ${CSS_BOX_SHADOW};
 
     transition: all .5s;
-    &.${ HEADER_HIDE_CLASS } {
+    &.${HEADER_HIDE_CLASS} {
       transform: translateY(-100%);
     }
-    ${ MEDIA_DESKTOP } {
+    ${MEDIA_DESKTOP} {
       min-width: 1200px;
-      height: 78px;
+      height: 70px;
     }
-    ${ MEDIA_MOBILE } {
-      height: 19.44vw;
+    ${MEDIA_MOBILE} {
+      height: 20vw;
       &.${HEADER_MOBILE_MENU_OPEN} {
         height: 72vw;
       }
@@ -119,7 +119,7 @@ const PlainHeader: React.FunctionComponent<Props> = (props) => {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      ${ MEDIA_DESKTOP } {
+      ${MEDIA_DESKTOP} {
         width: 1200px;
         margin: 0 auto;
       }
@@ -149,14 +149,14 @@ const PlainHeader: React.FunctionComponent<Props> = (props) => {
 
               cursor: pointer;
               user-select: none;
-              ${ MEDIA_DESKTOP } {
+              ${MEDIA_DESKTOP} {
                 width: 200px;
                 height: 50px;
               }
-              ${ MEDIA_MOBILE } {
-                width: 27.78vw;
-                height: 8.89vw;
-                margin: 5.56vw;
+              ${MEDIA_MOBILE} {
+                width: 28vw;
+                height: 9vw;
+                margin: 5.5vw;
               }
             }`}></div>
           </a>
@@ -168,13 +168,13 @@ const PlainHeader: React.FunctionComponent<Props> = (props) => {
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
-          ${ MEDIA_DESKTOP } {
+          ${MEDIA_DESKTOP} {
             display: none;
           }
-          ${ MEDIA_MOBILE } {
-            width: 5.56vw;
-            height: 5.56vw;
-            margin: 5.56vw;
+          ${MEDIA_MOBILE} {
+            width: 5.5vw;
+            height: 5.5vw;
+            margin: 5.5vw;
           }
         }`}></div>
       </div>
@@ -201,15 +201,15 @@ const PlainHeader: React.FunctionComponent<Props> = (props) => {
               left: 50%;
               width: 90%;
               transform: translateX(-50%);
-              border-top: solid 1px ${ COLOR_TEXT_LIGHT };
+              border-top: solid 1px ${COLOR_TEXT_LIGHT};
             }
           }
         }
         & .header__link__items {
           position: relative;
           margin-right: 2.5em;
-          color: ${ COLOR_TEXT };
-          font-family: ${ FONT_B };
+          color: ${COLOR_TEXT};
+          font-family: ${FONT_B};
           line-height: 1;
           text-decoration: none;
           ${MEDIA_DESKTOP} {

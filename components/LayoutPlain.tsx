@@ -15,33 +15,6 @@ const LayoutPlain: React.FunctionComponent<Props> = (props) => (
     </Head>
     { props.children }
     <style jsx global>{`
-    /*
-    @font-face {
-      font-family: 'SpoqaHanSansBold';
-      src: url('/fonts/SpoqaHanSans/Spoqa_Han_Sans_Bold.woff2') format('woff2'),
-          url('/fonts/SpoqaHanSans/Spoqa_Han_Sans_Bold.ttf') format('truetype'),
-          url('/fonts/SpoqaHanSans/Spoqa_Han_Sans_Bold.eot') format('embedded-opentype');
-    }
-
-    @font-face {
-      font-family: 'SpoqaHanSansRegular';
-      src: url('/fonts/SpoqaHanSans/Spoqa_Han_Sans_Regular.woff2') format('woff2'),
-          url('/fonts/SpoqaHanSans/Spoqa_Han_Sans_Regular.eot') format('embedded-opentype');
-    }
-
-    @font-face {
-      font-family: 'SpoqaHanSansLight';
-      src: url('/fonts/SpoqaHanSans/Spoqa_Han_Sans_Light.woff2') format('woff2'),
-          url('/fonts/SpoqaHanSans/Spoqa_Han_Sans_Light.eot') format('embedded-opentype');
-    }
-
-    @font-face {
-      font-family: 'SpoqaHanSansThin';
-      src: url('/fonts/SpoqaHanSans/Spoqa_Han_Sans_Thin.woff2') format('woff2'),
-          url('/fonts/SpoqaHanSans/Spoqa_Han_Sans_Thin.eot') format('embedded-opentype');
-    }
-    */
-
     @font-face {
       font-family: 'NanumSquareL';
       src: url('/fonts/NanumSquare/NanumSquareL.woff2') format('woff2'),
@@ -89,28 +62,6 @@ const LayoutPlain: React.FunctionComponent<Props> = (props) => (
     .__font_el {
       font-family: 'NanumSquareL', sans-serif !important;
     }
-
-    /*
-    .__font_eb {
-      font-family: 'SpoqaHanSansBold', sans-serif;
-    }
-
-    .__font_b {
-      font-family: 'SpoqaHanSansBold', sans-serif;
-    }
-
-    .__font_r {
-      font-family: 'SpoqaHanSansRegular', sans-serif;
-    }
-
-    .__font_l {
-      font-family: 'SpoqaHanSansLight', sans-serif;
-    }
-
-    .__font_el {
-      font-family: 'SpoqaHanSansThin', sans-serif;
-    }
-    */
 
     * {
       box-sizing: border-box;

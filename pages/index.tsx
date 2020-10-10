@@ -9,13 +9,14 @@ import ImageSlider1 from '../components/slider/ImageSlider1'
 import PeopleIntro1 from '../components/intro/PeopleIntro1'
 import Contact1 from '../components/contact/Contact1'
 import Contact2 from '../components/contact/Contact2'
-import { MEDIA_DESKTOP, MEDIA_MOBILE, COLOR_TEXT_INVERT, COLOR_TEXT, FONT_B } from '../src/var'
+import { MEDIA_DESKTOP, MEDIA_MOBILE, COLOR_TEXT_INVERT, COLOR_TEXT, FONT_B, COLOR_BG } from '../src/var'
 import VerticalStickyImageNContentList from '../components/list/VerticalStickyImageNContentList'
 import GoToContact from '../components/form/GoToContact'
 import SliderLinear2 from '../components/slider/slider-linear2'
 import ReviewSlider from '../components/slider/review-slider'
 import ReviewImageSlider from '../components/slider/review-image-slider'
 import ZigzagGallery from '../components/gallery/zigzag-gallery'
+import SimpleContentImage from '../components/layout/simple-content-image'
 
 type Props = {}
 
@@ -176,6 +177,19 @@ const Index: NextPage<Props> = props => {
           title: 'title5'
         }
       ]} />
+      <SimpleContentImage
+        bgColor={COLOR_BG}
+        color={COLOR_TEXT}
+        content={
+          <p css={css`{
+            height: 5em;
+          }`}>layout/simple-content-image.tsx</p>
+        }
+        imgSrc={'/img/example1.jpg'}
+        imgSrcM={'/img/example1.jpg'}
+        reverse={false}
+        reverseM={false}
+      />
   </LayoutPlain>)
 }
 

@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { NextPage } from "next"
-import { MEDIA_DESKTOP, MEDIA_MOBILE, FONT_EB, FONT_R, COLOR_PRIMARY_HIGHLIGHT as COLOR_PRIMARY, COLOR_PRIMARY_BG, COLOR_TEXT } from '../src/var'
+import { NextPage } from 'next'
 import Link from 'next/link'
+
+import { MEDIA_DESKTOP, MEDIA_MOBILE, FONT_EB, FONT_R,
+  COLOR_PRIMARY, COLOR_PRIMARY_BG, COLOR_TEXT } from '../src/var'
 
 type Props = {}
 const Error404: NextPage<Props> = props => {
@@ -29,7 +31,7 @@ const Error404: NextPage<Props> = props => {
       text-align: center;
     }`}>
       <div className='image' css={css`{
-        background-image: url("/common/logo2.png");
+        background-image: url("/common/logo.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;

@@ -17,7 +17,6 @@ export const FONT_L2 = '"SpoqaHanSansThin", sans-serif'
 
 // Main Color
 export const COLOR_PRIMARY = '#007a50'
-export const COLOR_PRIMARY_HIGHLIGHT = '#005530'
 export const COLOR_PRIMARY_BG = '#ffffff'
 // Text Color
 export const COLOR_TEXT = '#292929'
@@ -46,7 +45,9 @@ export const COLOR_GRAY_800 = '#424242'
 export const COLOR_GRAY_900 = '#212121'
 export const COLOR_BLACK = '#000000'
 // Shadow Color
-export const COLOR_SHADOW = 'rgba(0,0,0,.16)';
+export const COLOR_SHADOW = 'rgba(0,0,0,.15)';
+export const COLOR_SHADOW_LIGHT = 'rgba(0,0,0,.05)';
+export const COLOR_SHADOW_DARK = 'rgba(0,0,0,.3)';
 
 export const CSS_ABSOLUTE_FULL = `position: absolute;
 top: 0;
@@ -62,7 +63,12 @@ background-size: cover;`
 export const CSS_BACKGROUND_IMAGE_CONTAIN = `background-position: center;
 background-repeat: no-repeat;
 background-size: contain;`
-export const CSS_BOX_SHADOW = `box-shadow: 0 3px 6px 0 ${COLOR_SHADOW};`
+export const CSS_BOX_SHADOW = `box-shadow: 0 0 6px 0 ${COLOR_SHADOW};`
+export const CSS_BOX_SHADOW_LIGHT = `box-shadow: 0 0 6px 0 ${COLOR_SHADOW_LIGHT};`
+export const CSS_BOX_SHADOW_DARK = `box-shadow: 0 0 6px 0 ${COLOR_SHADOW_DARK};`
+export const CSS_BOX_SHADOW_CARD = `box-shadow: 0 3px 6px 0 ${COLOR_SHADOW};`
+export const CSS_BOX_SHADOW_CARD_LIGHT = `box-shadow: 0 3px 6px 0 ${COLOR_SHADOW_LIGHT};`
+export const CSS_BOX_SHADOW_CARD_DARK = `box-shadow: 0 3px 6px 0 ${COLOR_SHADOW_DARK};`
 
 
 export const SITE_MAIN_HREF = 'https://example.com/'
