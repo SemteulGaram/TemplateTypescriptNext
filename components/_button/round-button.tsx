@@ -1,5 +1,5 @@
 /** @jsx jsx */
-// Round Button v1.0.0
+// Round Button v1.0.1
 import { css, keyframes } from '@emotion/core'
 import styled from '@emotion/styled'
 
@@ -75,6 +75,8 @@ const RoundButton: React.FunctionComponent<Props> = styled.button<Props>`
   text-decoration: none;
   cursor: pointer;
   user-select: none;
+
+  transition: opacity .15s ease-in;
   ${MEDIA_DESKTOP} {
     width: ${pr => pr.width || 'unset'};
     padding: .75em 1.35em;
@@ -110,13 +112,13 @@ const RoundButton: React.FunctionComponent<Props> = styled.button<Props>`
     }
     ${MEDIA_DESKTOP} {
       &:not(:active)::before {
-        animation: ${generatorKeyfrmaesRipple(pr.overrideRippleSize || '160px')} 0.4s cubic-bezier(0, 0, 0.2, 1);
+        animation: ${generatorKeyfrmaesRipple(pr.overrideRippleSize || pr.width || '160px')} 0.4s cubic-bezier(0, 0, 0.2, 1);
         transition: visibility .4s step-end;
       }
     }
     ${MEDIA_MOBILE} {
       &:not(:active)::before {
-        animation: ${generatorKeyfrmaesRipple(pr.overrideRippleSizeM || '30vw')} 0.4s cubic-bezier(0, 0, 0.2, 1);
+        animation: ${generatorKeyfrmaesRipple(pr.overrideRippleSizeM || pr.widthM || '30vw')} 0.4s cubic-bezier(0, 0, 0.2, 1);
         transition: visibility .4s step-end;
       }
     }
