@@ -2,6 +2,8 @@
 import { jsx, css } from '@emotion/core'
 import { NextPage } from 'next'
 import Head from 'next/head'
+
+import { MEDIA_DESKTOP, MEDIA_MOBILE, COLOR_TEXT_INVERT, COLOR_TEXT, FONT_B, COLOR_BG } from '../src/var'
 import PlainHeader from '../components/header/plain-header'
 import LayoutPlain from '../components/LayoutPlain'
 import HorizontalLinkList1 from '../components/list/HorizontalLinkList1'
@@ -9,14 +11,13 @@ import ImageSlider1 from '../components/slider/ImageSlider1'
 import PeopleIntro1 from '../components/intro/PeopleIntro1'
 import Contact1 from '../components/contact/Contact1'
 import Contact2 from '../components/contact/Contact2'
-import { MEDIA_DESKTOP, MEDIA_MOBILE, COLOR_TEXT_INVERT, COLOR_TEXT, FONT_B, COLOR_BG } from '../src/var'
 import VerticalStickyImageNContentList from '../components/list/VerticalStickyImageNContentList'
 import GoToContact from '../components/form/GoToContact'
-import SliderLinear2 from '../components/slider/slider-linear2'
 import ReviewSlider from '../components/slider/review-slider'
 import ReviewImageSlider from '../components/slider/review-image-slider'
 import ZigzagGallery from '../components/gallery/zigzag-gallery'
 import SimpleContentImage from '../components/layout/simple-content-image'
+import ShowcaseHorizontal3 from '../components/showcase/showcase-horizontal3'
 
 type Props = {}
 
@@ -178,17 +179,59 @@ const Index: NextPage<Props> = props => {
         }
       ]} />
       <SimpleContentImage
-        bgColor={COLOR_BG}
-        color={COLOR_TEXT}
-        content={
-          <p css={css`{
-            height: 5em;
-          }`}>layout/simple-content-image.tsx</p>
-        }
-        imgSrc={'/img/example1.jpg'}
-        imgSrcM={'/img/example1.jpg'}
-        reverse={false}
-        reverseM={false}
+          bgColor={COLOR_BG}
+          color={COLOR_TEXT}
+          componentMargin={'180px 0'}
+          componentMarginM={'20vw 0'}
+          fontSize={'16px'}
+          fontSizeM={'4.5vw'}
+          content={
+            <p css={css`{
+              height: 5em;
+            }`}>layout/simple-content-image.tsx</p>
+          }
+          imgSrc={'/img/example1.jpg'}
+          imgSrcM={'/img/example1.jpg'}
+          reverse={false}
+          reverseM={false}
+      />
+      <ShowcaseHorizontal3
+          bgColor={COLOR_BG}
+          color={COLOR_TEXT}
+          componentMargin={'180px 0'}
+          componentMarginM={'20vw 0'}
+          fontSize={'16px'}
+          fontSizeM={'4.5vw'}
+
+          title={
+            <span>showcase/showcase-horizontal.tsx</span>
+          }
+          items={[
+            {
+              imgSrc: '/img/example1.jpg',
+              imgSrcM: '/img/example1.jpg',
+              title: 'title1',
+              views: 0,
+              date: new Date(),
+              link: '#'
+            },
+            {
+              imgSrc: '/img/example1.jpg',
+              imgSrcM: '/img/example1.jpg',
+              title: 'title2',
+              views: 0,
+              date: new Date(),
+              link: '#'
+            },
+            {
+              imgSrc: '/img/example1.jpg',
+              imgSrcM: '/img/example1.jpg',
+              title: 'title3',
+              views: 0,
+              date: new Date(),
+              link: '#'
+            }
+          ]}
       />
   </LayoutPlain>)
 }

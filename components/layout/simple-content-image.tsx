@@ -4,7 +4,7 @@ import { jsx, css } from '@emotion/core'
 
 import { ComponentBase, DEFAULT_COMPONENT_MARGIN, DEFAULT_COMPONENT_MARGIN_M,
   DEFAULT_FONT_SIZE, DEFAULT_FONT_SIZE_M } from '../@type/component-base'
-  import { MEDIA_DESKTOP, MEDIA_MOBILE, CSS_BACKGROUND_IMAGE_CONTAIN } from '../../src/var'
+  import { MEDIA_DESKTOP, MEDIA_MOBILE, CSS_BACKGROUND_IMAGE_CONTAIN, COLOR_BG, COLOR_TEXT } from '../../src/var'
 
 type Props = ComponentBase & {
   content: React.ReactElement
@@ -17,18 +17,18 @@ type Props = ComponentBase & {
 const SimpleContentImage: React.FunctionComponent<Props> = (props) => (<div className='sci' css={[css`{
   position: relative;
 
-  background-color: ${props.bgColor};
+  background-color: ${props.bgColor || COLOR_BG};
 
-  color: ${props.color};
+  color: ${props.color || COLOR_TEXT};
   ${MEDIA_DESKTOP} {
     padding: ${props.componentMargin || DEFAULT_COMPONENT_MARGIN};
 
     font-size: ${props.fontSize || DEFAULT_FONT_SIZE};
   }
   ${MEDIA_MOBILE} {
-    padding: ${props.componentMargin || DEFAULT_COMPONENT_MARGIN_M};
+    padding: ${props.componentMarginM || DEFAULT_COMPONENT_MARGIN_M};
 
-    font-size: ${props.fontSize || DEFAULT_FONT_SIZE_M};
+    font-size: ${props.fontSizeM || DEFAULT_FONT_SIZE_M};
   }
 }`, props.additionalCss]}>
   <div className='sci__limiter' css={css`{

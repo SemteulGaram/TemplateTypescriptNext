@@ -1,10 +1,14 @@
 /** @jsx jsx */
-// Showcase Horizontal3 v1.0.0
+// Showcase Horizontal3 v1.0.1
 import { jsx, css } from '@emotion/core'
-import { dateYY_MM_DD } from '../../src/utils/dateFormat'
-import { MEDIA_DESKTOP, MEDIA_MOBILE, FONT_B, CSS_BACKGROUND_IMAGE_COVER, FONT_R, COLOR_PRIMARY, COLOR_TEXT, COLOR_TEXT_LIGHT } from '../../src/var'
 
-type Item = {
+import { dateYY_MM_DD } from '../../src/utils/dateFormat'
+import { MEDIA_DESKTOP, MEDIA_MOBILE, FONT_B, CSS_BACKGROUND_IMAGE_COVER, FONT_R,
+  COLOR_PRIMARY, COLOR_TEXT, COLOR_BG, COLOR_TEXT_LIGHTER } from '../../src/var'
+import { ComponentBase, DEFAULT_COMPONENT_MARGIN, DEFAULT_COMPONENT_MARGIN_M,
+  DEFAULT_FONT_SIZE, DEFAULT_FONT_SIZE_M } from '../@type/component-base'
+
+export type Item = {
   imgSrc: string
   imgSrcM?: string
   title: string
@@ -12,9 +16,14 @@ type Item = {
   date: Date
   link: string
 }
-type Card1Props = {
+export type Card1Props = {
   item: Item
 }
+export type Props = ComponentBase & {
+  title: React.ReactElement
+  items: Item[]
+}
+
 const Card1: React.FunctionComponent<Card1Props> = props => (<a href={props.item.link}
     target="_blank" css={css`{
   flex: 0 0 auto;
@@ -93,7 +102,7 @@ const Card1: React.FunctionComponent<Card1Props> = props => (<a href={props.item
           { props.item.views }
         </div>
         <div className='card1__date' css={css`{
-          color: ${COLOR_TEXT_LIGHT};
+          color: ${COLOR_TEXT_LIGHTER};
           ${MEDIA_DESKTOP} {
             font-size: 16px;
           }
@@ -106,23 +115,28 @@ const Card1: React.FunctionComponent<Card1Props> = props => (<a href={props.item
   </div>
 </a>)
 
-
-type Props = {
-  items: Item[]
-}
 const ShowcaseHorizontal3: React.FunctionComponent<Props> = props => {
-  return (<div className={'sh3'} css={css`{
-    display: none;
+  if (props.items.length !== 3) {
+    throw new Error('props.items must have 3 children')
+  }
 
+  return (<div className={'sh3'} css={[css`{
     position: relative;
-    width: 100%;
+
+    background-color: ${props.bgColor || COLOR_BG};
+
+    color: ${props.color || COLOR_TEXT};
     ${MEDIA_DESKTOP} {
-      padding: 0 0 120px 0;
+      padding: ${props.componentMargin || DEFAULT_COMPONENT_MARGIN};
+
+      font-size: ${props.fontSize || DEFAULT_FONT_SIZE};
     }
     ${MEDIA_MOBILE} {
-      padding: 0 0 10vw 0;
+      padding: ${props.componentMarginM || DEFAULT_COMPONENT_MARGIN_M};
+
+      font-size: ${props.fontSizeM || DEFAULT_FONT_SIZE_M};
     }
-  }`}>
+  }`, props.additionalCss]}>
     <div className='sh3__limiter' css={css`{
       position: relative;
       ${MEDIA_DESKTOP} {
@@ -135,25 +149,18 @@ const ShowcaseHorizontal3: React.FunctionComponent<Props> = props => {
           position: relative;
           margin: 0;
 
-          color: ${COLOR_TEXT};
           font-family: ${FONT_R};
           line-height: 1.5;
           text-align: center;
           ${MEDIA_DESKTOP} {
-            padding-top: 90px;
-
             font-size: 38px;
           }
           ${MEDIA_MOBILE} {
-            padding-top: 25vw;
             font-size: 5.5vw;
           }
-        }`}>
-          유튜브 채널을 운영하시려면<br/>
-          <span css={css`{
-            font-family: ${FONT_B};
-          }`}>이 정도는 알고 계셔야 합니다</span>
-        </h2>
+        }`}>{
+          props.title || 'showcase-horizontal3.tsx'
+        }</h2>
       </div>
     </div>
     <div className='sh3__links' css={css`{
