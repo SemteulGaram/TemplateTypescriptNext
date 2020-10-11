@@ -19,6 +19,7 @@ import ZigzagGallery from '../components/gallery/zigzag-gallery'
 import SimpleContentImage from '../components/layout/simple-content-image'
 import ShowcaseHorizontal3 from '../components/showcase/showcase-horizontal3'
 import RoundButton from '../components/_button/round-button'
+import ShowcaseHorizontal4 from '../components/showcase/showcase-horizontal4'
 
 type Props = {}
 
@@ -237,6 +238,48 @@ const Index: NextPage<Props> = props => {
               link: '#'
             }
           ]}
+      />
+      <ShowcaseHorizontal4
+          title={<span>showcase-horizontal4.tsx</span>}
+          items={[
+            <div key='1' css={css`{
+              height: 10em;
+
+              background-color: IndianRed;
+            }`}></div>,
+            <div key='2' css={css`{
+              height: 10em;
+
+              background-color: Khaki;
+            }`}></div>,
+            <div key='3' css={css`{
+              height: 10em;
+
+              background-color: LightGreen;
+            }`}></div>,
+            <div key='4' css={css`{
+              height: 10em;
+
+              background-color: MediumTurquoise;
+            }`}></div>
+          ]}
+          additionalContent={<RoundButton
+              color={COLOR_PRIMARY_BG}
+              bgColor={COLOR_PRIMARY}
+              width={'200px'}
+              widthM={'40vw'}
+              css={css`{
+                margin: 0 auto;
+                ${MEDIA_DESKTOP} {
+                  margin-top: 64px;
+                }
+                ${MEDIA_MOBILE} {
+                  margin-top: 5vw;
+                }
+              }`}
+          >
+            additionalContent
+          </RoundButton>}
       />
   </LayoutPlain>)
 }
