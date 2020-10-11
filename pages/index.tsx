@@ -20,6 +20,7 @@ import SimpleContentImage from '../components/layout/simple-content-image'
 import ShowcaseHorizontal3 from '../components/showcase/showcase-horizontal3'
 import RoundButton from '../components/_button/round-button'
 import ShowcaseHorizontal4 from '../components/showcase/showcase-horizontal4'
+import BasicFooter from '../components/footer/basic-footer'
 
 type Props = {}
 
@@ -280,6 +281,17 @@ const Index: NextPage<Props> = props => {
           >
             additionalContent
           </RoundButton>}
+      />
+      <BasicFooter
+        logoImgSrc={'/img/example2.jpg'}
+        logoImgSrcM={'/img/example2.jpg'}
+        title={'basic-footer.tsx'}
+        contactInfo={<div>
+          EMAIL: WIP<br/>
+          PHONE: WIP
+        </div>}
+        companyName={'TESTPAGE'}
+        copyrightYear={'2020'}
       />
   </LayoutPlain>)
 }

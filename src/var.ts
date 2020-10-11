@@ -16,8 +16,9 @@ export const FONT_L2 = '"SpoqaHanSansThin", sans-serif'
 */
 
 // Main Color
-export const COLOR_PRIMARY = '#007a50'
-export const COLOR_PRIMARY_BG = '#ffffff'
+export const COLOR_PRIMARY = '#E9C637'
+export const COLOR_PRIMARY_HIGHLIGHT = '#0E2442'
+export const COLOR_PRIMARY_BG = '#FFFFFF'
 // Text Color
 export const COLOR_TEXT = '#292929'
 export const COLOR_TEXT_LIGHT = '#6f6f6f'
@@ -29,7 +30,9 @@ export const COLOR_BG = '#ffffff'
 export const COLOR_BG_DARK = '#f8f8f8'
 export const COLOR_BG_DARKER = '#bababa'
 export const COLOR_BG_INVERT = '#292929'
-
+// Element-base Color
+export const COLOR_FOOTER_TEXT = '#8F8F8F'
+export const COLOR_FOOTER_BG = '#F8F8F8'
 // Always Color
 export const COLOR_WHITE = '#ffffff'
 export const COLOR_GRAY_50 = '#FAFAFA'
