@@ -21,6 +21,7 @@ import ShowcaseHorizontal3 from '../components/showcase/showcase-horizontal3'
 import RoundButton from '../components/_button/round-button'
 import ShowcaseHorizontal4 from '../components/showcase/showcase-horizontal4'
 import BasicFooter from '../components/footer/basic-footer'
+import RoundContact from '../components/contact/round-contact'
 
 type Props = {}
 
@@ -117,182 +118,188 @@ const Index: NextPage<Props> = props => {
             font-family: ${FONT_B};
           }
         }`}
-        desktopImageRight={true} />
-      <GoToContact />
-      <ReviewSlider list={[
-        {
-          imgSrc: '/img/example1.jpg',
-          author: 'author',
-          content: 'content'
-        },
-        {
-          imgSrc: '/img/example2.jpg',
-          author: 'author2',
-          content: 'content2'
-        },
-        {
-          imgSrc: '/img/example3.jpg',
-          author: 'author3',
-          content: 'content3'
+        desktopImageRight={true}
+    />
+    <GoToContact />
+    <ReviewSlider list={[
+      {
+        imgSrc: '/img/example1.jpg',
+        author: 'author',
+        content: 'content'
+      },
+      {
+        imgSrc: '/img/example2.jpg',
+        author: 'author2',
+        content: 'content2'
+      },
+      {
+        imgSrc: '/img/example3.jpg',
+        author: 'author3',
+        content: 'content3'
+      }
+    ]} />
+    <ReviewImageSlider items={[
+      {
+        imgSrc: '/img/example1.jpg',
+        imgSrcM: '/img/example1.jpg',
+        title: 'title1'
+      },
+      {
+        imgSrc: '/img/example2.jpg',
+        imgSrcM: '/img/example2.jpg',
+        title: 'title2'
+      },
+      {
+        imgSrc: '/img/example3.jpg',
+        imgSrcM: '/img/example3.jpg',
+        title: 'title3'
+      },
+      {
+        imgSrc: '/img/example4.jpg',
+        imgSrcM: '/img/example4.jpg',
+        title: 'title4'
+      },
+      {
+        imgSrc: '/img/example1.jpg',
+        imgSrcM: '/img/example1.jpg',
+        title: 'title5'
+      }
+    ]} />
+    <ZigzagGallery items={[
+      {
+        imgSrc: '/img/example1.jpg',
+        title: 'title1'
+      },
+      {
+        imgSrc: '/img/example2.jpg',
+        title: 'title2'
+      },
+      {
+        imgSrc: '/img/example3.jpg',
+        title: 'title3'
+      },
+      {
+        imgSrc: '/img/example4.jpg',
+        title: 'title4'
+      },
+      {
+        imgSrc: '/img/example1.jpg',
+        title: 'title5'
+      }
+    ]} />
+    <SimpleContentImage
+        bgColor={COLOR_BG}
+        color={COLOR_TEXT}
+        componentMargin={'180px 0'}
+        componentMarginM={'20vw 0'}
+        fontSize={'16px'}
+        fontSizeM={'3vw'}
+        content={
+          <p css={css`{
+            height: 5em;
+          }`}>layout/simple-content-image.tsx</p>
         }
-      ]} />
-      <ReviewImageSlider items={[
-        {
-          imgSrc: '/img/example1.jpg',
-          imgSrcM: '/img/example1.jpg',
-          title: 'title1'
-        },
-        {
-          imgSrc: '/img/example2.jpg',
-          imgSrcM: '/img/example2.jpg',
-          title: 'title2'
-        },
-        {
-          imgSrc: '/img/example3.jpg',
-          imgSrcM: '/img/example3.jpg',
-          title: 'title3'
-        },
-        {
-          imgSrc: '/img/example4.jpg',
-          imgSrcM: '/img/example4.jpg',
-          title: 'title4'
-        },
-        {
-          imgSrc: '/img/example1.jpg',
-          imgSrcM: '/img/example1.jpg',
-          title: 'title5'
+        imgSrc={'/img/example1.jpg'}
+        imgSrcM={'/img/example1.jpg'}
+        reverse={false}
+        reverseM={false}
+    />
+    <ShowcaseHorizontal3
+        bgColor={COLOR_BG}
+        color={COLOR_TEXT}
+        componentMargin={'180px 0'}
+        componentMarginM={'20vw 0'}
+        fontSize={'16px'}
+        fontSizeM={'3vw'}
+
+        title={
+          <span>showcase/showcase-horizontal.tsx</span>
         }
-      ]} />
-      <ZigzagGallery items={[
-        {
-          imgSrc: '/img/example1.jpg',
-          title: 'title1'
-        },
-        {
-          imgSrc: '/img/example2.jpg',
-          title: 'title2'
-        },
-        {
-          imgSrc: '/img/example3.jpg',
-          title: 'title3'
-        },
-        {
-          imgSrc: '/img/example4.jpg',
-          title: 'title4'
-        },
-        {
-          imgSrc: '/img/example1.jpg',
-          title: 'title5'
-        }
-      ]} />
-      <SimpleContentImage
-          bgColor={COLOR_BG}
-          color={COLOR_TEXT}
-          componentMargin={'180px 0'}
-          componentMarginM={'20vw 0'}
-          fontSize={'16px'}
-          fontSizeM={'3vw'}
-          content={
-            <p css={css`{
-              height: 5em;
-            }`}>layout/simple-content-image.tsx</p>
+        items={[
+          {
+            imgSrc: '/img/example1.jpg',
+            imgSrcM: '/img/example1.jpg',
+            title: 'title1',
+            views: 0,
+            date: new Date(),
+            link: '#'
+          },
+          {
+            imgSrc: '/img/example1.jpg',
+            imgSrcM: '/img/example1.jpg',
+            title: 'title2',
+            views: 0,
+            date: new Date(),
+            link: '#'
+          },
+          {
+            imgSrc: '/img/example1.jpg',
+            imgSrcM: '/img/example1.jpg',
+            title: 'title3',
+            views: 0,
+            date: new Date(),
+            link: '#'
           }
-          imgSrc={'/img/example1.jpg'}
-          imgSrcM={'/img/example1.jpg'}
-          reverse={false}
-          reverseM={false}
-      />
-      <ShowcaseHorizontal3
-          bgColor={COLOR_BG}
-          color={COLOR_TEXT}
-          componentMargin={'180px 0'}
-          componentMarginM={'20vw 0'}
-          fontSize={'16px'}
-          fontSizeM={'3vw'}
+        ]}
+    />
+    <ShowcaseHorizontal4
+        title={<span>showcase-horizontal4.tsx</span>}
+        items={[
+          <div key='1' css={css`{
+            height: 10em;
 
-          title={
-            <span>showcase/showcase-horizontal.tsx</span>
-          }
-          items={[
-            {
-              imgSrc: '/img/example1.jpg',
-              imgSrcM: '/img/example1.jpg',
-              title: 'title1',
-              views: 0,
-              date: new Date(),
-              link: '#'
-            },
-            {
-              imgSrc: '/img/example1.jpg',
-              imgSrcM: '/img/example1.jpg',
-              title: 'title2',
-              views: 0,
-              date: new Date(),
-              link: '#'
-            },
-            {
-              imgSrc: '/img/example1.jpg',
-              imgSrcM: '/img/example1.jpg',
-              title: 'title3',
-              views: 0,
-              date: new Date(),
-              link: '#'
-            }
-          ]}
-      />
-      <ShowcaseHorizontal4
-          title={<span>showcase-horizontal4.tsx</span>}
-          items={[
-            <div key='1' css={css`{
-              height: 10em;
+            background-color: IndianRed;
+          }`}></div>,
+          <div key='2' css={css`{
+            height: 10em;
 
-              background-color: IndianRed;
-            }`}></div>,
-            <div key='2' css={css`{
-              height: 10em;
+            background-color: Khaki;
+          }`}></div>,
+          <div key='3' css={css`{
+            height: 10em;
 
-              background-color: Khaki;
-            }`}></div>,
-            <div key='3' css={css`{
-              height: 10em;
+            background-color: LightGreen;
+          }`}></div>,
+          <div key='4' css={css`{
+            height: 10em;
 
-              background-color: LightGreen;
-            }`}></div>,
-            <div key='4' css={css`{
-              height: 10em;
-
-              background-color: MediumTurquoise;
-            }`}></div>
-          ]}
-          additionalContent={<RoundButton
-              color={COLOR_PRIMARY_BG}
-              bgColor={COLOR_PRIMARY}
-              width={'200px'}
-              widthM={'40vw'}
-              css={css`{
-                margin: 0 auto;
-                ${MEDIA_DESKTOP} {
-                  margin-top: 64px;
-                }
-                ${MEDIA_MOBILE} {
-                  margin-top: 5vw;
-                }
-              }`}
+            background-color: MediumTurquoise;
+          }`}></div>
+        ]}
+        additionalContent={
+          <RoundButton
+            color={COLOR_PRIMARY_BG}
+            bgColor={COLOR_PRIMARY}
+            width={'200px'}
+            widthM={'40vw'}
+            css={css`{
+              margin: 0 auto;
+              ${MEDIA_DESKTOP} {
+                margin-top: 64px;
+              }
+              ${MEDIA_MOBILE} {
+                margin-top: 5vw;
+              }
+            }`}
           >
             additionalContent
-          </RoundButton>}
-      />
-      <BasicFooter
-        logoImgSrc={'/img/example2.jpg'}
-        logoImgSrcM={'/img/example2.jpg'}
-        title={'basic-footer.tsx'}
-        contactInfo={<div>
-          EMAIL: WIP<br/>
-          PHONE: WIP
-        </div>}
-        companyName={'TESTPAGE'}
-        copyrightYear={'2020'}
-      />
+          </RoundButton>
+        }
+    />
+    <BasicFooter
+      logoImgSrc={'/img/example2.jpg'}
+      logoImgSrcM={'/img/example2.jpg'}
+      title={'basic-footer.tsx'}
+      contactInfo={<div>
+        EMAIL: WIP<br/>
+        PHONE: WIP
+      </div>}
+      companyName={'TESTPAGE'}
+      copyrightYear={'2020'}
+    />
+    <RoundContact
+        title={<span>round-contact.tsx</span>}
+    />
   </LayoutPlain>)
 }
 
