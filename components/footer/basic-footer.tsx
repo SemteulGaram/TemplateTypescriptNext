@@ -1,4 +1,5 @@
 /** @jsx jsx */
+// Basic Footer v1.0.1
 import { jsx, css, Interpolation } from '@emotion/core'
 
 import { COLOR_FOOTER_BG, COLOR_FOOTER_TEXT, CSS_BACKGROUND_IMAGE_CONTAIN, FONT_B, MEDIA_DESKTOP, MEDIA_MOBILE } from '../../src/var'
@@ -77,7 +78,8 @@ const BasicFooter: React.FunctionComponent<Props> = props => (<div className='ba
         }
       `}>
         <div className='footer__icon' css={css`{
-          filter: grayscale(100%) brightness(150%);
+          ${CSS_BACKGROUND_IMAGE_CONTAIN}
+          filter: contrast(0) brightness(150%);
           ${MEDIA_DESKTOP} {
             width: 200px;
             height: 50px;
