@@ -70,6 +70,7 @@ const LayoutPlain: React.FunctionComponent<Props> = (props) => (
 
     html {
       font-family: ${FONT_R};
+      scroll-behavior: smooth;
     }
 
     body {

@@ -22,14 +22,32 @@ import RoundButton from '../components/_button/round-button'
 import ShowcaseHorizontal4 from '../components/showcase/showcase-horizontal4'
 import BasicFooter from '../components/footer/basic-footer'
 import RoundContact from '../components/contact/round-contact'
+import { useState } from 'react'
+import CardPopup from '../components/popup/card-popup'
+import { unsafeUuidV4 } from '../src/utils/uuid'
 
 type Props = {}
 
 const Index: NextPage<Props> = props => {
+  const [ popupHolder, _setPopupHolder ] = useState<React.ReactElement[]>([])
+  const refreshPopup = () => {
+    _setPopupHolder(popupHolder.slice())
+  }
+  const removePopup = (key: string) => {
+    for (let i=0;i<popupHolder.length;i++) {
+      if (popupHolder[i].key === key) {
+        popupHolder.splice(i, 1)
+        refreshPopup()
+        break
+      }
+    }
+  }
+
   return (<LayoutPlain>
     <Head>
       <title>컴포넌트 예시 페이지</title>
     </Head>
+    { popupHolder }
     <PlainHeader position='fixed' additionalCss={css`{
       &.header--top {
         ${MEDIA_DESKTOP} {
@@ -72,6 +90,17 @@ const Index: NextPage<Props> = props => {
     <RoundButton
         bgColor={COLOR_PRIMARY}
         color={COLOR_PRIMARY_BG}
+        onClick={() => {
+          const key = unsafeUuidV4()
+          popupHolder.push(<CardPopup
+              key={key}
+              title='Hello?'
+              content={<div>
+                Hello
+              </div>}
+              closeCallback={() => { removePopup(key) }} />)
+          refreshPopup()
+        }}
     >ROUND BUTTON</RoundButton>
     <ImageSlider1 imgSrcs={[
       '/img/example1.jpg',
