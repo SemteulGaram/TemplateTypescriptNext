@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 import { jsx, css } from '@emotion/core'
 
 import { MEDIA_DESKTOP, FONT_EB, FONT_B, MEDIA_MOBILE, COLOR_BG_INVERT, COLOR_TEXT_INVERT, COLOR_PRIMARY, COLOR_PRIMARY_BG } from '../../src/var'

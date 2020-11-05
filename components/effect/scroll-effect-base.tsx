@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 /**
  * @module react/components/scroll-effect-base
  * Base effector to apply style when element expose on screen

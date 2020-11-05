@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 // Important: must include pages/_app.tsx
 import { jsx, css } from '@emotion/core'
 import 'react-dates/initialize'

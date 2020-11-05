@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 import { jsx, css, Interpolation } from '@emotion/core'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'

@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 // Round Input v1.0.0
 import styled from '@emotion/styled'
 

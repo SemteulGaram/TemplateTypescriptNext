@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 // Round Button v1.0.3
 import { css, keyframes } from '@emotion/core'
 import styled from '@emotion/styled'

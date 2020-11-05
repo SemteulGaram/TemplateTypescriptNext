@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 // TODO: refactor
 import { jsx, css } from '@emotion/core'
 import { useState } from 'react'

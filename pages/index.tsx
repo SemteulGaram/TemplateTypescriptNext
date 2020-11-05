@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+/** @jsxImportSource @emotion/core */
+import { css } from '@emotion/core'
 import { NextPage } from 'next'
 import Head from 'next/head'
 

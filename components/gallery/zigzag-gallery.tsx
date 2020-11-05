@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 import { jsx, css } from '@emotion/core'
 
 import { MEDIA_DESKTOP, CSS_ABSOLUTE_FULL, MEDIA_MOBILE, CSS_BACKGROUND_IMAGE_COVER,

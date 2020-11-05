@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 import { jsx, Interpolation } from '@emotion/core'
 import React from 'react'
 

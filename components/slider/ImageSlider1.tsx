@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 // ImageSlider1 v1.0.0
 // Warning: This component must use once each page for querying element issue
 import { jsx, css } from '@emotion/core'

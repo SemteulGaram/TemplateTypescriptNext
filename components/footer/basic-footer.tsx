@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 // Basic Footer v1.0.1
 import { jsx, css, Interpolation } from '@emotion/core'
 

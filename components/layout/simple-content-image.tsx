@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 // Simple Content & Image v1.0.0
 import { jsx, css } from '@emotion/core'
 

@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 // H1 Title Text v1.0.0
 import styled from '@emotion/styled'
 import { COLOR_TEXT, FONT_B, MEDIA_DESKTOP, MEDIA_MOBILE } from '../../src/var'

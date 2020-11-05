@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 // Showcase Horizontal3 v1.0.1
 import { jsx, css } from '@emotion/core'
 

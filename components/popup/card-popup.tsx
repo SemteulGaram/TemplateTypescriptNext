@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/core */
 // Card Popup v1.0.1
 import { jsx, css, keyframes, Interpolation } from '@emotion/core'
 import { COLOR_BG, COLOR_TEXT, CSS_BOX_SHADOW, FONT_B, MEDIA_DESKTOP, MEDIA_MOBILE } from '../../src/var'
