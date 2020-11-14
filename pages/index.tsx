@@ -25,6 +25,7 @@ import RoundContact from '../components/contact/round-contact'
 import { useState } from 'react'
 import CardPopup from '../components/popup/card-popup'
 import { unsafeUuidV4 } from '../src/utils/uuid'
+import TopBanner from '../components/topBanner/topBanner'
 
 type Props = {}
 
@@ -48,7 +49,20 @@ const Index: NextPage<Props> = props => {
       <title>컴포넌트 예시 페이지</title>
     </Head>
     { popupHolder }
-    <PlainHeader position='fixed' additionalCss={css`{
+    <TopBanner
+        bgColor={COLOR_PRIMARY}
+        color={COLOR_PRIMARY_BG}
+        closeCallback={() => {alert('closeCallback')}}
+        items={[
+      {
+        title: 'TopBanner.tsx TopBanner.tsx TopBanner.tsx TopBanner.tsx',
+        titleLinkText: 'titleLinkText',
+        detailLink: '/#contact',
+        detailLinkText: 'detailLinkText',
+        detailResourceLink: '/img/example1.png'
+      }
+    ]} />
+    <PlainHeader position='relative' additionalCss={css`{
       &.header--top {
         ${MEDIA_DESKTOP} {
           height: 165px;

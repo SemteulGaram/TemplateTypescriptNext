@@ -51,7 +51,7 @@ class SliderLinear2 extends React.Component<Props, State> {
   constructor (props: Readonly<Props>) {
     super(props)
 
-    const minItemCount = (props.additionalDisplayCount ? (props.additionalDisplayCount*2)+1 : 2)
+    const minItemCount = (props.additionalDisplayCount !== undefined ? (props.additionalDisplayCount*2)+1 : 3)
     if (props.items.length < minItemCount) {
       throw new Error(`Min item count is ${minItemCount}`)
     }

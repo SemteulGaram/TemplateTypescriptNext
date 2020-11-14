@@ -1,3 +1,5 @@
+import { css } from "@emotion/core"
+
 export const MEDIA_DESKTOP = '@media (min-width: 800px)'
 export const MEDIA_MOBILE = '@media screen and (max-width: 799px)'
 
@@ -73,7 +75,12 @@ export const CSS_BOX_SHADOW_CARD = `box-shadow: 0 3px 6px 0 ${COLOR_SHADOW};`
 export const CSS_BOX_SHADOW_CARD_LIGHT = `box-shadow: 0 3px 6px 0 ${COLOR_SHADOW_LIGHT};`
 export const CSS_BOX_SHADOW_CARD_DARK = `box-shadow: 0 3px 6px 0 ${COLOR_SHADOW_DARK};`
 export const CSS_BOX_SHADOW_BUTTON = `box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);`
-
+export const CSS_A_UNSET = css`{
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}`
 
 export const SITE_MAIN_HREF = 'https://example.com/'
 export const URL_POST_REGEX = /^.*-([0-9a-f]{8,})$/
