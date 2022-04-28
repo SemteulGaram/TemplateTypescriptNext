@@ -1,19 +1,11 @@
-/** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
+import RhombusButton from 'components/theme-rhombus/button/rhombus-button';
 import { NextPage } from 'next';
-import { MEDIA_DESKTOP, MEDIA_MOBILE } from 'src/var';
 
 const Index: NextPage = () => {
   return (
-    <div
-      className=""
-      css={css`
-        ${MEDIA_DESKTOP} {
-        }
-        ${MEDIA_MOBILE} {
-        }
-      `}
-    ></div>
+    <div className="index">
+      <RhombusButton label="hello" />
+    </div>
   );
 };
 

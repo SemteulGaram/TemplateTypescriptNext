@@ -6,6 +6,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:react/recommended',
     'next/core-web-vitals',
+    'plugin:storybook/recommended',
   ],
   root: true,
   env: {
@@ -21,7 +22,10 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-unused-vars': [
       'warn',
-      { varsIgnorePattern: '__+', args: 'none' },
+      {
+        varsIgnorePattern: '__+',
+        args: 'none',
+      },
     ],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
@@ -29,7 +33,10 @@ module.exports = {
     quotes: [
       'warn',
       'single',
-      { avoidEscape: true, allowTemplateLiterals: false },
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: false,
+      },
     ],
     '@next/next/no-img-element': 'off',
   },

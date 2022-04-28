@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-module.exports = withOptimizedImages({
+module.exports = {
   // Next.js configuration 
   reactStrictMode: true
-});
+};
