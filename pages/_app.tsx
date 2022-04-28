@@ -1,7 +1,8 @@
-// pages/_app.js
-// For global css files
-import 'react-dates/lib/css/_datepicker.css'
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
 
-export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
 }
+
+export default MyApp;
