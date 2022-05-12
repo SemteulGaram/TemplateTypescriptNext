@@ -1,4 +1,4 @@
-import moment from 'moment'
+import moment from 'moment';
 
 export default function isBeforeDay(a: moment.Moment, b: moment.Moment) {
   if (!moment.isMoment(a) || !moment.isMoment(b)) return false;

@@ -5,14 +5,16 @@
  * @version 1.0
  * @since 2020-05-28
  */
-import crypto from 'crypto'
+import crypto from 'crypto';
 
-function _unsafeGenerator (): string {
-  return (Math.floor(Math.random()*0xFFFF)).toString(16).padStart(4, '0')
+function _unsafeGenerator(): string {
+  return Math.floor(Math.random() * 0xffff)
+    .toString(16)
+    .padStart(4, '0');
 }
 
-function _cryptoModuleGenerator (): string {
-  return crypto.randomBytes(2).toString('hex').padStart(4, '0')
+function _cryptoModuleGenerator(): string {
+  return crypto.randomBytes(2).toString('hex').padStart(4, '0');
 }
 
 /**
@@ -21,7 +23,7 @@ function _cryptoModuleGenerator (): string {
  * @return {string}
  */
 export function unsafeShortUuidV4(): string {
-  return `${ _unsafeGenerator() }${ _unsafeGenerator() }`
+  return `${_unsafeGenerator()}${_unsafeGenerator()}`;
 }
 
 /**
@@ -30,10 +32,7 @@ export function unsafeShortUuidV4(): string {
  * @return {string}
  */
 export function unsafeUuidV4(): string {
-  return `${ _unsafeGenerator() }${ _unsafeGenerator() }-${
-    _unsafeGenerator() }-${ _unsafeGenerator() }-${
-    _unsafeGenerator() }-${ _unsafeGenerator() }${
-    _unsafeGenerator() }${ _unsafeGenerator() }`
+  return `${_unsafeGenerator()}${_unsafeGenerator()}-${_unsafeGenerator()}-${_unsafeGenerator()}-${_unsafeGenerator()}-${_unsafeGenerator()}${_unsafeGenerator()}${_unsafeGenerator()}`;
 }
 
 /**
@@ -42,7 +41,7 @@ export function unsafeUuidV4(): string {
  * @return {string}
  */
 export function shortUuidV4(): string {
-  return `${ _cryptoModuleGenerator() }${ _cryptoModuleGenerator() }`
+  return `${_cryptoModuleGenerator()}${_cryptoModuleGenerator()}`;
 }
 
 /**
@@ -51,8 +50,5 @@ export function shortUuidV4(): string {
  * @return {string}
  */
 export function uuidV4(): string {
-  return `${ _cryptoModuleGenerator() }${ _cryptoModuleGenerator() }-${
-    _cryptoModuleGenerator() }-${ _cryptoModuleGenerator() }-${
-    _cryptoModuleGenerator() }-${ _cryptoModuleGenerator() }${
-    _cryptoModuleGenerator() }${ _cryptoModuleGenerator() }`
+  return `${_cryptoModuleGenerator()}${_cryptoModuleGenerator()}-${_cryptoModuleGenerator()}-${_cryptoModuleGenerator()}-${_cryptoModuleGenerator()}-${_cryptoModuleGenerator()}${_cryptoModuleGenerator()}${_cryptoModuleGenerator()}`;
 }
